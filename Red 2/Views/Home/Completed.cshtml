@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "All";
+    ViewBag.Title = "Completed";
 }
 @model List<Red_2.Models.TodoItem>
 
 <div class="centered">
-    <h2>Everything</h2>
-    @foreach(var item in Model)
+    <h2>Completed</h2>
+    @foreach (var item in Model)
     {
         Html.RenderPartial("_TodoItemPartial", item);
     }

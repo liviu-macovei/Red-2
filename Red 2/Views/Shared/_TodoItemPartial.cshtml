@@ -1,0 +1,8 @@
+﻿@model Red_2.Models.TodoItem
+
+<p>
+   @Html.ActionLink(Model.Description, "Details", "Home", new { id = Model.Id }, new { @class = (Model.IsDone ? "crossed" : "not-crossed") }) | 
+    @Html.ActionLink("Done?", "CheckDone", "Home", new { id = Model.Id }, null)
+        @*@Ajax.ActionLink("Done?", "CheckDone", "Home", new AjaxOptions { OnSuccess = "updateChecked();" })*@
+    
+</p>
